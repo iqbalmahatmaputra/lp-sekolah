@@ -1,0 +1,253 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Clone UI LandingPage">
+  <meta name="keywords" content="LearningX">
+  <meta name="author" content="LearningX-Mentor">
+  <link href="/dist/css/output.css" rel="stylesheet">
+  <script>
+    if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia(
+        '(prefers-color-scheme: dark)').matches)) {
+      document.documentElement.classList.add('dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+    }
+  </script>
+</head>
+
+<body>
+  <!-- Header Start -->
+  <header class="absolute top-0 left-0 z-10 flex w-full items-center bg-transparent dark:bg-dark">
+    <div class="container">
+      <div class="relative flex items-center justify-between">
+        <div class="px-4">
+          <a href="#home" class="block py-6 text-lg font-bold text-primary ">
+            <img src="dist/img/logo_smk.png" alt="SMK LearningX" class="h-12 w-auto" srcset="">
+          </a>
+        </div>
+        <div class="flex items-center px-4">
+          <button id="hamburger" name="hamburger" type="button" class="absolute right-4 block lg:hidden">
+            <span class="hamburger-line origin-top-left transition duration-300 ease-in-out"></span>
+            <span class="hamburger-line transition duration-300 ease-in-out"></span>
+            <span class="hamburger-line origin-bottom-left transition duration-300 ease-in-out"></span>
+          </button>
+
+          <nav id="nav-menu"
+            class="absolute right-4 top-full hidden w-full max-w-[250px] rounded-lg bg-white py-5 shadow-lg dark:bg-dark dark:shadow-slate-500 lg:static lg:block lg:max-w-full lg:rounded-none lg:bg-transparent lg:shadow-none lg:dark:bg-transparent">
+            <ul class="block lg:flex">
+              <li class="group">
+                <a href="#beranda"
+                  class="mx-8 flex py-2 text-base text-dark group-hover:text-primary dark:text-white">Beranda</a>
+              </li>
+              <li class="group">
+                <a href="#tentang"
+                  class="mx-8 flex py-2 text-base text-dark group-hover:text-primary dark:text-white">Tentang</a>
+              </li>
+              <li class="group">
+                <a href="#fasilitas"
+                  class="mx-8 flex py-2 text-base text-dark group-hover:text-primary dark:text-white">Fasilitas</a>
+              </li>
+              <li class="group">
+                <a href="#aktifitas"
+                  class="mx-8 flex py-2 text-base text-dark group-hover:text-primary dark:text-white">Aktifitas</a>
+              </li>
+
+              <li class="mt-3 flex items-center pl-8 lg:mt-0">
+                <div class="flex">
+                  <span class="mr-2 text-sm text-slate-500">Light</span>
+                  <input type="checkbox" class="hidden" id="dark-toggle" />
+                  <label for="dark-toggle">
+                    <div class="flex h-5 w-9 cursor-pointer items-center rounded-full bg-slate-500 p-1">
+                      <div class="toggle-circle h-4 w-4 rounded-full bg-white transition duration-300 ease-in-out">
+                      </div>
+                    </div>
+                  </label>
+                  <span class="ml-2 text-sm text-slate-500">Dark</span>
+                </div>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- Header End -->
+
+  <!-- Home Start -->
+  <section id="beranda" class="pt-36 dark:bg-dark bg-[#F2F6FF]">
+    <div class="container">
+      <div class="flex flex-wrap pb-4">
+        <div class="w-full self-center px-4 lg:w-1/2 ">
+          <h1 class="text-4xl font-bold text-gray-800 mb-10">Selamat Datang Calon Siswa Baru
+            <span class="text-primary font-bold text-4xl block">SMK LearningX</span>
+          </h1>
+          <p class="mb-10 leading-relaxed text-slate-500">Sekolah Menengah Kejuruan (SMK) adalah salah satu bentuk
+            satuan pendidikan formal yang menyelenggarakan pendidikan kejuruan pada jenjang pendidikan menengah yang
+            mempersiapkan peserta didik terutama untuk bekerja di bidang tertentu. Siswa dapat melanjutkan pendidikan
+            SMK setelah menyelesaikan pendidikan di tingkat Sekolah Menengah Pertama atau sederajat.</p>
+          <a href="#"
+            class="rounded-full bg-primary py-3 px-8 text-base font-semibold text-white transition duration-300 ease-in-out hover:opacity-80 hover:shadow-lg">Pelajari
+            Selengkapnya</a>
+        </div>
+        <div class="w-full lg:w-1/2 self-center justify-center">
+          <div class="mt-8">
+            <img class="object-cover overflow-hidden" src="dist/img/anakSMK.png" alt="Image">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Home End -->
+
+  <!-- About Start -->
+  <section id="tentang" class="bg-slate-200 pt-36 pb-16 dark:bg-slate-800">
+    <div class="container">
+      <div class="w-full px-4">
+        <div class="mx-auto mb-16 max-w-xl text-center">
+          <h2 class="mb-4 text-3xl font-bold text-primary dark:text-white sm:text-4xl lg:text-5xl line-primary">Tentang Kami</h2>
+          <hr class="border-t-7 border-primary my-2 w-64 mx-auto">
+          <p class="text-md font-medium text-secondary md:text-lg">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatibus porro consequuntur alias, commodi nemo enim aliquam ipsam obcaecati? Assumenda, ipsam?
+          </p>
+        </div>
+      </div>
+
+      <div class="flex w-full flex-wrap justify-center px-4 xl:mx-auto xl:w-10/12">
+        <div class="mb-12 p-4 md:w-1/2">
+          
+          <p className="text-md font-medium text-slate-500 md:text-lg leading-relaxed dark:text-slate-200">Sekolah Menengah Kejuruan (SMK) adalah salah satu bentuk satuan pendidikan formal yang menyelenggarakan pendidikan kejuruan pada jenjang pendidikan menengah yang mempersiapkan peserta didik terutama untuk bekerja di bidang tertentu. Siswa dapat melanjutkan pendidikan SMK setelah menyelesaikan pendidikan di tingkat Sekolah Menengah Pertama atau sederajat. </p>
+          <div class="overflow-hidden rounded-md shadow-md mt-2">
+            <img src="dist/img/img1.png" alt="Gedung Sekolah" width="w-full" />
+          </div>
+        </div>
+        <div class="mb-12 p-4 md:w-1/2">
+          <div class="overflow-hidden rounded-md shadow-md mb-2">
+            <img src="dist/img/img2.png" alt="Fasilitas" width="w-full" />
+          </div>
+         
+          <p className="text-justify font-medium text-slate-500 leading-relaxed dark:text-slate-200">Sekolah Menengah Kejuruan LearningX kota Pekanbaru ini merupakan salah satu lembaga pendidikan di Provinsi Riau. Sekolah yang telah berdiri dari tahun 1967 ini telah mencetak ribuan generasi bangsa yang handal dan dapat bekerja di berbagai perusahaan besar baik di dalam negeri maupun mancanegara seperti Equatorial Malaka, Sribayu Perak dll. Sekolah Menengah Kejuruan yang berlokasi di Jl. Dr. Sutomo No. 110 Pekanbaru ini telah membuktikan prestasinya dengan menempati ranking ke 4 dalam SMK kelompok pariwisata se-Indonesia dengan nilai rata-rata 63,3. Teknologi Informasi Web khususnya, menjadi sarana bagi SMK LearningX untuk memberi pelayanan informasi secara cepat, jelas, dan akuntable. </p>
+        </div>
+      </div>
+      </div>
+    </div>
+  </section>
+  <!-- About End -->
+
+  <!-- Facility Start  -->
+<section id="fasilitas" class="bg-primary pt-36 pb-16 ">
+<div class="container">
+  <div class="w-full px-4">
+    <div class="mx-auto mb-16 max-w-xl text-center">
+      <h2 class="mb-4 text-3xl font-bold text-amber-600 dark:text-white sm:text-4xl lg:text-2xl line-primary">Fasilitas Sekolah</h2>
+      <hr class="border-t-7 border-amber-600 my-2 w-64 md:hidden mx-auto">
+      <h1 class="mb-4 text-slate-200 text-4xl font-semibold">Fasilitas Sekolah SMK LearningX</h1>
+      <p class="text-md font-light text-slate-200 md:text-lg">
+        SMK LearningX Menyediakan Fasilitas Terbaik Bagi Siswa Mendukung Pembelajaran
+      </p>
+    </div>
+    <div class="mx-auto">
+      <img src="dist/img/facility.png" class="w-full" alt="" srcset="">
+    </div>
+  </div>
+</div>
+</section>
+<!-- Facility End -->
+
+  <!-- Activity Start  -->
+  <section id="aktifitas" class="bg-gradient-to-r from-primary from-10% pt-36 pb-16 dark:bg-slate-800">
+    <div class="container">
+      <div class="w-full px-4">
+        <div class="mx-auto mb-16 max-w-xl text-center">
+          <h2 class="mb-4 text-3xl font-bold text-slate-300 dark:text-white sm:text-4xl lg:text-5xl line-slate-300">Aktifitas Sekolah</h2>
+          <hr class="border-t-7 border-slate-300 my-2 w-64 mx-auto lg:w-80">
+         
+          <p class="text-md font-light text-gray-200 md:text-lg">
+            Berdayakan Masa Depan, Wujudkan Prestasi: Aktifitas Sekolah Menginspirasi, Membentuk, dan Membawa Kreativitas Menuju Puncak Keberhasilan!
+          </p>
+        </div>
+        <div class="container">
+          <div class="flex flex-wrap justify-center">
+            <div class=" bg-slate-200 rounded p-4 w-full lg:w-1/4 mb-2 ">
+              <img src="dist/img/activity/sport.jpg" class="rounded" alt="">
+              <h3 class="mt-5 mb-3 text-xl font-semibold text-dark ">Kejuaraan Nasional</h3>
+            <p class="text-base font-medium text-secondary">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Unde velit cum impedit repellat. Nam, ducimus?</p>
+            </div>
+            <div class="bg-slate-200 rounded p-4 w-full lg:w-1/4 md:mx-4 lg:mx-6 mb-2 lg:scale-110">
+              <img src="dist/img/activity/graduation.jpg" class="rounded" alt="">
+              <h3 class="mt-5 mb-3 text-xl font-semibold text-dark ">Melangkah ke Dunia Profesional</h3>
+            <p class="text-base font-medium text-secondary">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Unde velit cum impedit repellat. Nam, ducimus?</p>
+            </div>
+            <div class=" bg-slate-200 rounded p-4 w-full lg:w-1/4 mb-2 ">
+              <img src="dist/img/activity/teamwork.jpg" class="rounded" alt="">
+              <h3 class="mt-5 mb-3 text-xl font-semibold text-dark ">Prestasi Masa Depan</h3>
+            <p class="text-base font-medium text-secondary">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Unde velit cum impedit repellat. Nam, ducimus?</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </section>
+    <!-- Activity End -->
+<!-- Footer Start -->
+<footer class="bg-slate-800 pt-24 pb-12">
+<div class="container">
+  <div class="flex flex-wrap">
+    <div class="mb-12 w-full px-4 font-medium text-slate-300 md:w-1/3">
+      <a href="#home" class="block text-lg font-bold text-primary ">
+        <img src="dist/img/logo_smk.png" alt="SMK LearningX" class="h-20 w-auto" srcset="">
+      </a>
+      <h3 class="mb-2 text-2xl font-bold">Dikembangkan oleh</h3>
+      <p>LearningX-Mentor</p>
+      <p>Pacific Century Place Lantai 33</p>
+      <small class="font-thin">untuk bahan ajar LearningX</small>
+    </div>
+    <div class="mb-12 w-full px-4 md:w-1/3">
+      <h3 class="mb-5 text-xl font-semibold text-white">Bantuan</h3>
+      <ul class="text-slate-300">
+        <li>
+          <a href="#" class="mb-3 inline-block text-base hover:text-primary">Laporkan Masalah</a>
+        </li>
+        <li>
+          <a href="#" class="mb-3 inline-block text-base hover:text-primary">FAQ</a>
+        </li>
+        <li>
+          <a href="#" class="mb-3 inline-block text-base hover:text-primary">Syarat dan Ketentuan</a>
+        </li>
+      </ul>
+    </div>
+    <div class="mb-12 w-full px-4 md:w-1/3">
+      <h3 class="mb-5 text-xl font-semibold text-white">Layanan dan Pengaduan Konsumen</h3>
+      <ul class="text-slate-300">
+        <li>
+          <a href="#" class="mb-3 inline-block text-base hover:text-primary">Direktorat Jenderal Perlindungan Konsumen dan Tertib Niaga</a>
+        </li>
+        <li>
+          <a href="#" class="mb-3 inline-block text-base hover:text-primary">Kementerian Perdagangan Republik Indonesia</a>
+        </li>
+        <li>
+          <a href="#" class="mb-3 inline-block text-base hover:text-primary">Whatsapp: 085311111010 (WA Only)</a>
+        </li>
+       
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="w-full border-t border-slate-700 pt-10">
+  <div class="mb-2 flex items-center justify-center mt-2">
+    <p class="inline-block text-white text-base hover:text-primary">LearningX Copyright © 2023 All Rights Reserved</p>
+    </div>
+    </div>
+</footer>
+<!-- Footer End -->
+
+
+  
+  <script src="dist/js/script.js"></script>
+
+</body>
+
+</html>
